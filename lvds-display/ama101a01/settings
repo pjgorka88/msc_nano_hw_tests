@@ -1,0 +1,28 @@
+
+&dsi_lvds_bridge {
+	ti,dsi-lanes = <2>;
+	ti,lvds-format = <0>;
+	ti,lvds-bpp = <24>;
+	ti,width-mm = <217>;
+	ti,height-mm = <136>;
+	ti,lvds-channels = <1>;
+
+	display-timings {
+		lvds {
+			clock-frequency = <70000000>;
+			hactive = <1280>;
+			vactive = <800>;
+			hback-porch = <78>;
+			hfront-porch = <78>;
+			vback-porch = <10>;
+			vfront-porch = <10>;
+			hsync-len = <4>;
+			vsync-len = <3>;
+			hsync-active = <0>;
+			vsync-active = <0>;
+			de-active = <1>;
+			pixelclk-active = <0>;
+		};
+	};
+};
+
