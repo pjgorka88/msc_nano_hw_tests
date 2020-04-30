@@ -1,0 +1,28 @@
+GPIO MSC HEADER
+
+GPIO0 - GPIO1_IO00
+GPIO1 - GPIO1_IO1 (H) (R) (Pin3)
+GPIO2 - GPIO1- IO3
+GPIO3 - GPIO1_IO5 (H) (R) (PIN5)
+GPIO4 - GPIO0_IO6
+GPIO5 - GPIO5_IO2
+GPIO6 - GPIO5_IO1
+GPIO7 - GPIO4_IO22 (H) (R) (PIN7)
+GPIO8 - GPIO3_IO25 (H) (PIN9)
+GPIO9 - GPIO4_IO28 (H) (PIN4)
+GPIO10 - GPIO1_IO9 (H) (PIN6)
+GPIO11 - GPIO1_IO7 (H) (R) (PIN8)
+GPIO12 - GPIO2_IO9
+GPIO13 - GPIO2_IO8
+3v3 - PIN1
+1V8 - PIN2
+GND - PIN10
+
+Documentation/devicetree/bindings/pinctrl/fsl,imx-pinctrl.txt
+Documentation/devicetree/bindings/pinctrl/fsl,imx8mm-pinctrl.txt
+export (bank-1)*32+pin
+GPIO3_IO25 = (3-1)*32 + 25 = 64+25=89
+cat  89  > /sys/class/gpio/export
+echo in/out > /sys/class/gpio/gpio88/direction
+cat /sys/class/gpio/gpio89/value
+echo 1/0 > /sys/class/gpio/gpio89/value
