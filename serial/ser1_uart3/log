@@ -1,0 +1,30 @@
+
+#PIN  TX AND RX ON HEADER X2302 on EP1 were connected
+
+root@sm2s-imx8mlc-nano:~# stty -F /dev/ttymxc2 115200
+root@sm2s-imx8mlc-nano:~# ./test_uart test&
+[1] 5152
+root@sm2s-imx8mlc-nano:~# cat /dev/ttymxc2 
+test
+test
+test
+test
+test
+
+root@sm2s-imx8mlc-nano:~# stty -F /dev/ttymxc2 9600 
+root@sm2s-imx8mlc-nano:~# ./test_uart "9600 test"&
+[1] 5160
+root@sm2s-imx8mlc-nano:~# cat /dev/ttymxc2 
+9600 test
+9600 test
+9600 test
+9600 test
+9600 test
+
+
+root@sm2s-imx8mlc-nano:~# stty -F /dev/ttymxc2 raw -echo -echoe -echok parenb parodd 19200 
+root@sm2s-imx8mlc-nano:~# ./test_uart test_parity&
+[1] 5163
+root@sm2s-imx8mlc-nano:~# cat /dev/ttymxc2 
+test_parity
+test_parity

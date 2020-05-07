@@ -1,0 +1,22 @@
+root@sm2s-imx8mlc-nano:~# stty -F /dev/console 115200 -crtscts
+root@sm2s-imx8mlc-nano:~#  
+*** flow: none ***
+ls
+test-suite
+root@sm2s-imx8mlc-nano:~# 
+*** flow: RTS/CTS ***
+#CONSOLE WAS NON RESPOSICVE
+*** flow: xon/xoff ***
+ls
+test-suite
+root@sm2s-imx8mlc-nano:~# 
+*** flow: none ***
+stty -F /dev/console 115200 crtscts 
+root@sm2s-imx8mlc-nano:~# ls
+test-suite
+root@sm2s-imx8mlc-nano:~# 
+*** flow: RTS/CTS ***
+ls
+test-suite
+
+
