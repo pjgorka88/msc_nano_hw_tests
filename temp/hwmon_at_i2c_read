@@ -1,0 +1,5 @@
+root@sm2s-imx8mlc-nano:/sys/bus/i2c/devices/0-0071/hwmon/hwmon0# cat temp1_input
+39000
+
+root@sm2s-imx8mlc-nano:/sys/bus/i2c/devices/0-0071/hwmon/hwmon0# cat temp1_input
+40000
