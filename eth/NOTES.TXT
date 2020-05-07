@@ -1,5 +1,5 @@
 enabling 100mbit mode :
-    sudo ethtool -s eth0 speed 1000 duplex full
+    sudo ethtool -s eth0 speed 100 duplex full
 
 iperf3 --client IP_ADDR --time 3600 --logfile iperf_normal_MODEmbit_msc_is_server.log
 iperf3 --server --logfile iperf_normal_MODEmbit_msc_is_server.log
