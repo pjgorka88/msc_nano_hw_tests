@@ -1,0 +1,32 @@
+if device is IZ type 140000 kHz is ok,
+if we are speaking about JZ it should be 150000 so thats strange
+
+https://www.nxp.com/docs/en/data-sheet/IMX8MNIEC.pdf
+https://www.nxp.com/docs/en/data-sheet/IMX8MNCEC.pdf
+
+u-boot=> clocks
+ARM_PLL        1200 MHz
+SYS_PLL1_800         800 MHz
+SYS_PLL1_400         400 MHz
+SYS_PLL1_266         266 MHz
+SYS_PLL1_160         160 MHz
+SYS_PLL1_133         133 MHz
+SYS_PLL1_100         100 MHz
+SYS_PLL1_80          80 MHz
+SYS_PLL1_40          40 MHz
+SYS_PLL2_1000        1000 MHz
+SYS_PLL2_500         500 MHz
+SYS_PLL2_333         333 MHz
+SYS_PLL2_250         250 MHz
+SYS_PLL2_200         200 MHz
+SYS_PLL2_166         166 MHz
+SYS_PLL2_125         125 MHz
+SYS_PLL2_100         100 MHz
+SYS_PLL2_50          50 MHz
+SYS_PLL3            600 MHz
+UART1                24 MHz
+USDHC1              400 MHz
+QSPI                100 MHz
+
+
+CPU:   Freescale i.MX8MNano Quad rev1.0 1400 MHz (running at 1200 MHz)
