@@ -1,0 +1,2 @@
+ON EP1 schematics there is an address: 0xAE
+Real address is 0x50 + 0x07 (according to addr pins pullups)

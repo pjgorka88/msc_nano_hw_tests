@@ -1,0 +1,16 @@
+diff --git a/arch/arm64/boot/dts/msc/imx8mn/msc-sm2s-imx8mlc-nano-base.dtsi b/arch/arm64/boot/dts/msc/imx8mn/msc-sm2s-imx8mlc-nano-base.dtsi
+index 0d6a523601982..e5e41fdc56f01 100644
+--- a/arch/arm64/boot/dts/msc/imx8mn/msc-sm2s-imx8mlc-nano-base.dtsi
++++ b/arch/arm64/boot/dts/msc/imx8mn/msc-sm2s-imx8mlc-nano-base.dtsi
+@@ -718,6 +718,11 @@
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&pinctrl_i2c2>;
+ 	status = "okay";
++
++	module_eeprom@0x57 {
++		compatible = "atmel,24c64";
++		reg = <0x57>;
++	};
+ };
+ 
+ /* I2C_GP */
