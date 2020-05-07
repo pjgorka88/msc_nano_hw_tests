@@ -1,0 +1,15 @@
+dmesg > dmesg_log
+
+root@sm2s-imx8mlc-nano:~# dd if=dmesg_log of=/dev/mmcblk2 bs=1 count=3125      
+3125+0 records in
+3125+0 records out
+3125 bytes (3.1KB) copied, 0.017720 seconds, 172.2KB/s
+
+
+
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk2 of=dmesg_from_mmc bs=1 count=31256
+31256+0 records in
+31256+0 records out
+31256 bytes (30.5KB) copied, 0.235478 seconds, 129.6KB/s
+

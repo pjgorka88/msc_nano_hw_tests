@@ -1,0 +1,29 @@
+root@sm2s-imx8mlc-nano:~# dd if=/dev/urandom of=pattern_to_write_to_emmc bs=1MB count=128
+128+0 records in
+128+0 records out
+128000000 bytes (122.1MB) copied, 3.932204 seconds, 31.0MB/s
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_emmc of=/dev/mmcblk2
+250000+0 records in
+250000+0 records out
+128000000 bytes (122.1MB) copied, 11.666003 seconds, 10.5MB/s
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_emmc of=/dev/mmcblk2 bs=1MB count=128
+128+0 records in
+128+0 records out
+128000000 bytes (122.1MB) copied, 3.111732 seconds, 39.2MB/s
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_emmc of=/dev/mmcblk2 bs=128MB count=1  
+1+0 records in
+1+0 records out
+128000000 bytes (122.1MB) copied, 2.133436 seconds, 57.2MB/s
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_emmc of=/dev/mmcblk2 bs=128MB count=1
+1+0 records in
+1+0 records out
+
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk2 of=/dev/null bs=1MB count=128
+128+0 records in
+128+0 records out
+128000000 bytes (122.1MB) copied, 0.546700 seconds, 223.3MB/s
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk2 of=/dev/null bs=128MB count=1
+1+0 records in
+1+0 records out
+128000000 bytes (122.1MB) copied, 0.635017 seconds, 192.2MB/s
