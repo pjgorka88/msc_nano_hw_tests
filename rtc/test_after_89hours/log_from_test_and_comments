@@ -1,0 +1,17 @@
+root@sm2s-imx8mlc-nano:~ hwclock -r
+Thu Apr 30 15:47:50 2020  0.000000 seconds
+
+#TEST after long weekend
+
+root@sm2s-imx8mlc-nano:~ source test_date (hwclock -r;date)
+Mon May  4 09:22:01 2020  0.000000 seconds
+Mon May  4 09:22:05 CEST 2020
+assuming worst case scenario 09:22:05s:99ms - 09:22:01s:00ms
+< 5s
+
+~20ppm
+24 hours  - ~1.71s offset
+~89 hours difference -  ~6.34s expected max offset
+
+summary:
+worstcase timedrift after 89 hours was 5s, expected max offset for (20ppm) is 6.34 so we are in correct range

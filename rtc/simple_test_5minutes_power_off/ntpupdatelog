@@ -1,0 +1,12 @@
+root@sm2s-imx8mlc-nano:~# ntpupdate -u de.pool.ntp.org
+zsh: command not found: ntpupdate
+root@sm2s-imx8mlc-nano:~# ntpdate -u de.pool.ntp.org
+30 Apr 14:17:49 ntpdate[2446]: step time server 85.220.190.246 offset -7199.174068 sec
+root@sm2s-imx8mlc-nano:~# ntpdate -u de.pool.ntp.org
+30 Apr 14:18:14 ntpdate[2449]: adjust time server 85.220.190.246 offset 0.000004 sec
+root@sm2s-imx8mlc-nano:~# ntpdate -u de.pool.ntp.org
+30 Apr 14:18:32 ntpdate[2452]: adjust time server 85.220.190.246 offset -0.000104 sec
+root@sm2s-imx8mlc-nano:~# hwclock -w
+root@sm2s-imx8mlc-nano:~# date
+Thu Apr 30 14:18:36 CEST 2020
+root@sm2s-imx8mlc-nano:~# [  214.375181] fec 30be0000.ethernet eth0: Link is Down
