@@ -1,0 +1,12 @@
+root@sm2s-imx8mlc-nano:~# flash_erase /dev/mtd0 0 0
+Erasing 64 Kibyte @ ff0000 -- 100 % complete 
+
+root@sm2s-imx8mlc-nano:~# dd if=pattern.txt of=/dev/mtd0 bs=1024 count=16000
+16000+0 records in
+16000+0 records out
+16384000 bytes (15.6MB) copied, 33.333532 seconds, 480.0KB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mtd0 of=pattern_read.txt bs=1024 count=16000                     
+16000+0 records in
+16000+0 records out
+16384000 bytes (15.6MB) copied, 6.662376 seconds, 2.3MB/s
