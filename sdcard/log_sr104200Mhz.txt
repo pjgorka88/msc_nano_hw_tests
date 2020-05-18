@@ -1,0 +1,75 @@
+root@sm2s-imx8mlc-nano:~# 
+[ 1045.715417] mmc1: new ultra high speed SDR104 SDHC card at address 0001
+[ 1045.723761] mmcblk1: mmc1:0001 ASTC 14.9 GiB 
+[ 1045.730579]  mmcblk1: p1 p2 p3
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/urandom of=pattern_to_write_to_sdcard bs=1M count=128
+128+0 records in
+128+0 records out
+134217728 bytes (128.0MB) copied, 2.149109 seconds, 59.6MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=1M count=128
+128+0 records in
+128+0 records out
+134217728 bytes (128.0MB) copied, 4.115508 seconds, 31.1MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=1M count=128
+128+0 records in
+128+0 records out
+134217728 bytes (128.0MB) copied, 4.013624 seconds, 31.9MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=1M count=128
+128+0 records in
+128+0 records out
+134217728 bytes (128.0MB) copied, 4.133486 seconds, 31.0MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=128M count=1  
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 4.348685 seconds, 29.4MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=128M count=1
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 4.098563 seconds, 31.2MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/home/root/pattern_to_write_to_sdcard of=/dev/mmcblk1 bs=128M count=1
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 4.049025 seconds, 31.6MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk1 of=/home/root/pattern_read_from_sd_card bs=1M count=128
+70+0 records in
+69+0 records out
+72368128 bytes (69.0MB) copied, 1.805743 seconds, 38.2MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk1 of=/dev/null bs=128 count=1M 
+1048576+0 records in
+1048576+0 records out
+134217728 bytes (128.0MB) copied, 2.649284 seconds, 48.3MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk1 of=/dev/null bs=128 count=1M
+1048576+0 records in
+1048576+0 records out
+134217728 bytes (128.0MB) copied, 2.712655 seconds, 47.2MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk1 of=/dev/null bs=128M count=1
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 1.872852 seconds, 68.3MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/mmcblk1 of=/dev/null bs=128M count=1
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 1.871345 seconds, 68.4MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/zero of=/dev/mmcblk1 bs=128M count=1 
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 4.084253 seconds, 31.3MB/s
+
+root@sm2s-imx8mlc-nano:~# dd if=/dev/zero of=/dev/mmcblk1 bs=128M count=1
+1+0 records in
+1+0 records out
+134217728 bytes (128.0MB) copied, 3.874845 seconds, 33.0MB/s
+

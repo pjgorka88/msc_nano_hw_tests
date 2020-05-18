@@ -1,0 +1,86 @@
+###################################
+#CARD1 (Transcend)
+###################################
+[  370.897105] mmc1: new ultra high speed SDR104 SDHC card at address 59b4
+[  370.904962] mmcblk1: mmc1:59b4 SDU1  7.31 GiB 
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1                      
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 222 MB in  3.02 seconds =  73.45 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 222 MB in  3.01 seconds =  73.71 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 226 MB in  3.02 seconds =  74.96 MB/sec
+
+
+###################################
+#change clock
+###################################
+root@sm2s-imx8mlc-nano:~# echo 104000000 > /sys/kernel/debug/mmc1/clock
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1                       
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 126 MB in  3.04 seconds =  41.44 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 126 MB in  3.04 seconds =  41.45 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1c
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 126 MB in  3.04 seconds =  41.41 MB/sec
+
+###################################
+#CARD2 (Intenso)
+###################################
+
+root@sm2s-imx8mlc-nano:~# 
+[  597.334223] mmc1: new ultra high speed SDR104 SDHC card at address 0001
+[  597.346085] mmcblk1: mmc1:0001 ASTC 14.9 GiB 
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 208 MB in  3.02 seconds =  68.82 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 210 MB in  3.01 seconds =  69.87 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 210 MB in  3.01 seconds =  69.80 MB/sec
+
+
+###################################
+#change clock
+###################################
+root@sm2s-imx8mlc-nano:~# echo 104000000 > /sys/kernel/debug/mmc1/clock
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 120 MB in  3.00 seconds =  39.97 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 120 MB in  3.01 seconds =  39.92 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 120 MB in  3.03 seconds =  39.66 MB/sec
+root@sm2s-imx8mlc-nano:~# 

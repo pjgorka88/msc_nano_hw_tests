@@ -1,0 +1,45 @@
+root@sm2s-imx8mlc-nano:~# 
+[   23.785389] mmc1: new high speed SDHC card at address 0001
+[   23.792991] mmcblk1: mmc1:0001 ASTC 14.9 GiB 
+[   23.799802]  mmcblk1: p1 p2
+
+hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  64 MB in  3.01 seconds =  21.29 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  64 MB in  3.01 seconds =  21.27 MB/sec
+
+
+root@sm2s-imx8mlc-nano:~# 
+[  116.341189] mmc1: card 0001 removed
+[  121.977009] mmc1: new high speed SDHC card at address 59b4
+[  121.987786] mmcblk1: mmc1:59b4 SDU1  7.31 GiB 
+
+hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  66 MB in  3.04 seconds =  21.72 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  66 MB in  3.05 seconds =  21.67 MB/sec
+
+root@sm2s-imx8mlc-nano:~# 
+[  142.245162] mmc1: card 59b4 removed
+[  162.249136] mmc1: new high speed SDHC card at address aaaa
+[  162.256792] mmcblk1: mmc1:aaaa SL08G 7.40 GiB
+
+hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  66 MB in  3.04 seconds =  21.71 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads:  66 MB in  3.04 seconds =  21.70 MB/sec

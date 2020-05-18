@@ -1,0 +1,19 @@
+root@sm2s-imx8mlc-nano:~# 
+[  789.051629] mmc1: new ultra high speed DDR50 SDHC card at address aaaa
+[  789.059905] mmcblk1: mmc1:aaaa SL08G 7.40 GiB 
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 112 MB in  3.03 seconds =  37.00 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 112 MB in  3.02 seconds =  37.13 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk1
+/dev/mmcblk1:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 112 MB in  3.00 seconds =  37.31 MB/sec
+

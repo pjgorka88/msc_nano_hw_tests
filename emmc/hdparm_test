@@ -1,0 +1,9 @@
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk2
+/dev/mmcblk2:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 258 MB in  3.01 seconds =  85.58 MB/sec
+
+root@sm2s-imx8mlc-nano:~# hdparm -t /dev/mmcblk2
+/dev/mmcblk2:
+ HDIO_DRIVE_CMD(identify) failed: Invalid argument
+ Timing buffered disk reads: 258 MB in  3.01 seconds =  85.66 MB/sec
